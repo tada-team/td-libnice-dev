@@ -39,7 +39,7 @@ jobs:
         run: |
           mkdir -p td-libnice-dev_${{env.version}}/usr/local/src
           cd td-libnice-dev_${{env.version}}/usr/local/src
-          curl -L -o libnice-${{env.version}}.tar.gz https://github.com/libnice/libnice/releases/download/v${{env.version}}/libnice-${{env.version}}.tar.gz
+          curl -L -o libnice-${{env.version}}.tar.gz https://github.com/libnice/libnice/archive/${{env.version}}.tar.gz
           tar zvxf libnice-${{env.version}}.tar.gz
           rm libnice-${{env.version}}.tar.gz
       - name: Build .deb
