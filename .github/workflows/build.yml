@@ -48,7 +48,11 @@ jobs:
           mkdir -p dist
           mv td-libnice-dev_${{env.version}}.deb dist
           ls -lah dist
-      - name: Install SSH Client 🔑
+      - name: Try install
+        working-directory: dist
+        run: |
+          dpkg -i td-libnice-dev_${{env.version}}.deb
+      - name: Install SSH Client
         uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
