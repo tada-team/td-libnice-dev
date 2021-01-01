@@ -3,6 +3,8 @@ set -ex
 
 cd /usr/local/src/libnice-%VERSION%
 
-meson builddir
-ninja -C builddir
-ninja -C builddir install
+./autogen.sh
+./configure
+
+make
+make install
