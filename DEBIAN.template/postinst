@@ -3,7 +3,6 @@ set -ex
 
 cd /usr/local/src/libnice-%VERSION%
 
-./configure
-
-make
-make install
+meson builddir
+ninja -C builddir
+ninja -C builddir install

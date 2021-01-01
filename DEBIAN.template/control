@@ -5,4 +5,4 @@ Architecture: all
 Section: devel
 Description: custom libnice build
 Conflicts: libnice-dev
-Depends: build-essential
+Depends: build-essential, meson
