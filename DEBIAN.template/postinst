@@ -3,7 +3,6 @@ set -ex
 
 cd /usr/local/src/libnice-%VERSION%
 
-./autogen.sh
 ./configure
 
 make
