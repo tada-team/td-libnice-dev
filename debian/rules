@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+# avoid installing libtool *.la files
+export DH_OPTIONS = --exclude=.la
+
+override_dh_autoreconf:
+		./autogen.sh
+		dh_autoreconf --
+
+override_dh_auto_configure:
+		./autogen.sh
+		dh_auto_configure --
+
+override_dh_auto_test:
+		
+
+%:
+	dh $@
+
+.SECONDARY:

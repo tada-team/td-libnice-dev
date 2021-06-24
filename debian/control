@@ -1,0 +1,20 @@
+Source: td-libnice-dev
+Section: comm
+Priority: optional
+Maintainer: Tada.team <info@tada.team>
+Build-Depends:
+ debhelper-compat (= 11),
+ libssl-dev,
+ libglib2.0-dev,
+ pkg-config
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+
+Package: td-libnice-dev
+Architecture: any
+Section: devel
+Description: custom libnice build
+Conflicts: libnice-dev
+Depends:
+ ${misc:Depends},
+ libssl-dev

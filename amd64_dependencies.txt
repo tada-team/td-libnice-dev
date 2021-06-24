@@ -1,0 +1,1 @@
+libssl-dev pkg-config libglib2.0-dev gtk-doc-tools
